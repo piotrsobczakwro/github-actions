@@ -1,0 +1,15 @@
+name: deploy-python  
+on:  
+  push:  
+    branches:  
+      - main  
+jobs:  
+  Deploy-Nikola:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Checkout Git repository  
+        uses: actions/checkout@v2  
+      - name: Install Python 3.8  
+        uses: actions/setup-python@v2  
+        with:  
+          python-version: '3.8'  
